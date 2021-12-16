@@ -1,13 +1,16 @@
 import type { NextPage } from 'next'
-import Button from '@mui/material/Button'
+import Image from 'next/image'
+import mainImage from '../public/images/main/swiss.jpg'
 
-const Home: NextPage = () => {
+const Main: NextPage = () => {
   return (
-    <div className="font-bold bg-red-100">
-      <p>hello</p>
-      <Button variant="contained">World</Button>
+    <div className="">
+      <Image
+        src={mainImage}
+        alt="example tour image"
+      />
     </div>
   )
 }
 
-export default Home
+export default Main
