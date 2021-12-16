@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import mainImage from '../public/images/main/swiss.jpg'
+import mainImage from '@images/main/swiss.jpg'
 
 const Main: NextPage = () => {
   return (
