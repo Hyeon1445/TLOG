@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import Button from '@mui/material/Button';
-import EditLocationAltIcon from '@mui/icons-material/EditLocationAlt';
-import LoginModal from './LoginModal';
+import { useRouter } from 'next/router'
+import Button from '@mui/material/Button'
+import EditLocationAltIcon from '@mui/icons-material/EditLocationAlt'
+import LoginModal from './LoginModal'
 
 
 const MobileMain = () => {
+  const router = useRouter()
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
 
   return (
@@ -43,6 +45,7 @@ const MobileMain = () => {
           className="bg-red-500"
           variant="contained"
           startIcon={<EditLocationAltIcon />}
+          onClick={() => { router.push('/my-page')}}
         >
           MY TLOG
         </Button>
@@ -51,7 +54,6 @@ const MobileMain = () => {
         isModalOpen={isLoginModalOpen}
         setIsModalOpen={setIsLoginModalOpen}
       />
-      {/* TODO: Change Button Colors */}
     </div>
   )
 }
